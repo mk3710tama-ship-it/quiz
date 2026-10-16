@@ -1,0 +1,230 @@
+
+/* =========================
+   基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 24px;
+    min-height: 100vh;
+
+    font-family:
+        "Noto Sans JP",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+
+    color: #1e293b;
+    background: #f1f5f9;
+
+    line-height: 1.7;
+}
+
+/* =========================
+   各画面の共通デザイン
+========================= */
+
+#home,
+#quiz-screen,
+#result-screen {
+    width: 100%;
+    max-width: 600px;
+    margin: 48px auto;
+    padding: 36px;
+
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+/* hidden属性の画面は必ず非表示にする */
+[hidden] {
+    display: none !important;
+}
+
+/* =========================
+   ホーム画面
+========================= */
+
+#home {
+    margin-top: 100px;
+    text-align: center;
+}
+
+#home h1 {
+    margin-top: 0;
+    margin-bottom: 12px;
+
+    color: #1d4ed8;
+    font-size: 32px;
+    letter-spacing: 0.04em;
+}
+
+#home p {
+    margin-bottom: 28px;
+    color: #64748b;
+}
+
+/* =========================
+   ボタン
+========================= */
+
+button {
+    display: inline-block;
+    width: 100%;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2563eb;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: bold;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        transform 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* =========================
+   クイズ画面
+========================= */
+
+#question-number {
+    margin-top: 0;
+    margin-bottom: 8px;
+
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#question {
+    margin-top: 12px;
+    margin-bottom: 24px;
+
+    color: #0f172a;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+/* =========================
+   選択肢
+========================= */
+
+#choices {
+    margin-bottom: 24px;
+}
+
+#choices label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 12px;
+    padding: 14px 16px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+}
+
+#choices label:hover {
+    border-color: #60a5fa;
+    background: #eff6ff;
+}
+
+#choices input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+
+    accent-color: #2563eb;
+    cursor: pointer;
+}
+
+/* =========================
+   結果画面
+========================= */
+
+#result-screen {
+    text-align: center;
+}
+
+#result-screen h2 {
+    margin-top: 0;
+    color: #1d4ed8;
+    font-size: 28px;
+}
+
+#final-result {
+    margin: 28px 0;
+    color: #334155;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* =========================
+   スマートフォン対応
+========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+
+    #home,
+    #quiz-screen,
+    #result-screen {
+        margin: 24px auto;
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    #home {
+        margin-top: 60px;
+    }
+
+    #home h1 {
+        font-size: 26px;
+    }
+
+    #question {
+        font-size: 21px;
+    }
+
+    #choices label {
+        padding: 12px;
+    }
+}

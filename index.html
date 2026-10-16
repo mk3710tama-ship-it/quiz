@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズサイト</title>
+    <link rel="stylesheet" href="Quiz.Css.css">
+</head>
+<body>
+
+    <!-- ホーム画面 -->
+    <div id="home">
+        <h1>クイズサイト</h1>
+        <p>クイズに挑戦しましょう！</p>
+        <button id="start-quiz">クイズ開始</button>
+    </div>
+
+    <!-- クイズ画面 -->
+    <div id="quiz-screen" hidden>
+        <p id="question-number"></p>
+        <h2 id="question"></h2>
+
+        <form id="quiz-form">
+            <div id="choices"></div>
+            <button type="submit">回答する</button>
+        </form>
+    </div>
+
+    <!-- 結果画面 -->
+    <div id="result-screen" hidden>
+        <h2>クイズ終了！</h2>
+        <p id="final-result"></p>
+        <button id="back-home">ホームに戻る</button>
+    </div>
+
+    <!-- JavaScriptの読み込み -->
+    <script src="Quiz.Js.js"></script>
+
+</body>
+</html>
